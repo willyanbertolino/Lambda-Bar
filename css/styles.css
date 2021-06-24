@@ -114,7 +114,7 @@ p {
   font-size: 0.875rem;
   border: none;
   cursor: pointer;
-  box-shadow: 15px 10px 20px rgba(0, 0, 0, 1);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
 }
 
 .btn:hover {
@@ -196,6 +196,52 @@ header {
 Skills
 ------------------
 */
+
+.skills {
+  background: var(--clr-iron);
+}
+
+.skill {
+  padding: 2.5rem 0;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.skill-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.25rem;
+  display: inline-block;
+  transition: var(--transition);
+  color: var(--clr-primary-dark);
+}
+
+.skill-text {
+  color: var(--clr-secondary-martini);
+  max-width: 17rem;
+  margin: 0 auto;
+}
+
+.skill:hover {
+  background: var(--clr-satin-linen);
+  box-shadow: 0 2px var(--clr-primary-dark);
+}
+.skill:hover .skill-icon {
+  transform: translateY(-5px) rotate(-15deg);
+}
+
+@media screen and (min-width: 576px) {
+  .skill {
+    float: left;
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .skill {
+    float: left;
+    width: 25%;
+  }
+}
+
 /* 
 ------------------
 About
