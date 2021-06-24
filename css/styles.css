@@ -14,6 +14,8 @@ Variables
 :root {
   --clr-primary: #9dc335;
   --clr-primary-dark: #39490e;
+  --clr-primary-darken: #353a27;
+  --clr-main-text: #7a6c43;
   --clr-secondary-spicy-pink: #7c696f;
   --clr-secondary-martini: #b6a4a1;
   --clr-iron: #cdd3d3;
@@ -34,7 +36,7 @@ Variables
 body {
   font-family: var(--ff-primary);
   background: var(--clr-satin-linen);
-  color: var(--clr-secondary-spicy-pink);
+  color: var(--clr-main-text);
   line-height: 1.5;
   font-size: 0.875rem;
 }
@@ -120,6 +122,52 @@ p {
 .btn:hover {
   color: var(--clr-primary-dark);
   background: var(--clr-primary);
+}
+
+.clearfix::after,
+.clearfix::before {
+  content: '';
+  clear: both;
+  display: table;
+}
+
+.section-title {
+  margin-bottom: 2rem;
+}
+
+.section-title h3 {
+  font-family: var(--ff-secondary);
+  color: var(--clr-primary-dark);
+}
+
+.section-center {
+  padding: 4rem 0;
+  width: 80vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95vw;
+    padding: 4rem 1rem;
+  }
+}
+/* 
+------------------
+Scrollbar
+------------------
+*/
+::-webkit-scrollbar {
+  background: var(--clr-secondary-martini);
+  width: 0.65rem;
+  border-radius: var(--radius);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--clr-secondary-spicy-pink);
+  border-radius: 2px;
 }
 /* 
 ------------------
@@ -237,7 +285,6 @@ Skills
 }
 @media screen and (min-width: 1200px) {
   .skill {
-    float: left;
     width: 25%;
   }
 }
@@ -247,6 +294,60 @@ Skills
 About
 ------------------
 */
+
+.about-img,
+.about-info {
+  margin-left: 6%;
+  max-width: 30rem;
+  display: flex;
+  padding: 2rem 0;
+}
+
+.about-info {
+  position: relative;
+  display: block;
+}
+
+.about-picture-container {
+  background: var(--clr-primary-dark);
+  overflow: hidden;
+}
+
+.about-picture {
+  transition: var(--transition);
+}
+
+.about-picture-container:hover .about-picture {
+  opacity: 0.8;
+  transform: scale(1.25);
+}
+
+.text-container {
+  height: 9rem;
+  overflow: auto;
+}
+
+.about-text {
+  max-width: 26rem;
+  color: var(--clr-secondary-martini);
+}
+
+.btn-section {
+  position: absolute;
+  margin-top: 1rem;
+  left: 50%;
+  top: calc(100% - 2rem);
+  transform: translateX(-50%);
+}
+
+@media screen and (min-width: 992px) {
+  .about-img,
+  .about-info {
+    float: left;
+    width: 50%;
+    padding-left: 1rem;
+  }
+}
 /* 
 ------------------
 Products
@@ -266,4 +367,4 @@ Contact
 ------------------
 Footer
 ------------------
-*/
+*/ ;
