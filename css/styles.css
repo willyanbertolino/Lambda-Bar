@@ -124,6 +124,14 @@ p {
   background: var(--clr-primary);
 }
 
+.btn-section {
+  position: absolute;
+  margin-top: 1rem;
+  left: 50%;
+  top: calc(100% - 2rem);
+  transform: translateX(-50%);
+}
+
 .clearfix::after,
 .clearfix::before {
   content: '';
@@ -174,6 +182,16 @@ Scrollbar
 Animation
 ------------------
 */
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-20rem * 5 + 4rem));
+  }
+}
 
 /* 
 ------------------
@@ -298,7 +316,7 @@ About
 .about-img,
 .about-info {
   margin-left: 6%;
-  max-width: 30rem;
+  max-width: 28rem;
   display: flex;
   padding: 2rem 0;
 }
@@ -332,14 +350,6 @@ About
   color: var(--clr-secondary-martini);
 }
 
-.btn-section {
-  position: absolute;
-  margin-top: 1rem;
-  left: 50%;
-  top: calc(100% - 2rem);
-  transform: translateX(-50%);
-}
-
 @media screen and (min-width: 992px) {
   .about-img,
   .about-info {
@@ -353,6 +363,93 @@ About
 Products
 ------------------
 */
+.products {
+  background: var(--clr-iron);
+}
+
+.products-info {
+  padding: 2rem;
+  position: relative;
+  max-width: 24rem;
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+.product-text {
+  color: var(--clr-secondary-martini);
+  max-width: 26rem;
+}
+
+.product {
+  padding: 0 4rem;
+}
+.product-img {
+  margin-bottom: 1rem;
+  width: 16rem;
+  height: 22rem;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+.product h4 {
+  width: 16rem;
+  text-align: center;
+}
+
+/* carousel */
+.slider {
+  background: var(--clr-iron);
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 26rem;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 20rem;
+}
+
+.slider::after,
+.slider::before {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  content: '';
+  height: 26rem;
+  position: absolute;
+  width: 1rem;
+  z-index: 1;
+}
+
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+
+.slide-track {
+  animation: scroll 25s linear infinite;
+  display: flex;
+  width: calc(20rem * 5);
+}
+
+@media screen and (min-width: 768px) {
+  .products-info,
+  .carousel-containder {
+    float: left;
+    width: 50%;
+    padding-left: 2rem;
+  }
+}
+@media screen and (min-width: 1080px) {
+  .products-info,
+  .carousel-containder {
+    margin-left: 3rem;
+  }
+}
+
 /* 
 ------------------
 Services
