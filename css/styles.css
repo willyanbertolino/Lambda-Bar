@@ -301,6 +301,7 @@ Skills
     width: 50%;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .skill {
     width: 25%;
@@ -358,6 +359,7 @@ About
     padding-left: 1rem;
   }
 }
+
 /* 
 ------------------
 Products
@@ -447,6 +449,7 @@ Products
     padding-left: 2rem;
   }
 }
+
 @media screen and (min-width: 1080px) {
   .products-info,
   .carousel-containder {
@@ -538,6 +541,7 @@ Services
     margin-right: 5%;
   }
 }
+
 @media screen and (min-width: 992px) {
   .service-card {
     width: 30%;
@@ -630,3 +634,30 @@ Contact
 /* ------------------ 
 Footer
 ------------------ */
+footer {
+  background: #111;
+  text-align: center;
+}
+
+.social-icon {
+  color: var(--clr-satin-linen);
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  transition: var(--transition);
+}
+
+.social-icon:hover {
+  color: var(--clr-main-text);
+}
+
+.footer-text {
+  margin: 1.25rem;
+  text-transform: uppercase;
+  color: var(--clr-main-text);
+  font-weight: 400;
+}
+
+.company {
+  font-weight: 700;
+  color: var(--clr-main-text);
+}
