@@ -183,6 +183,71 @@ Animation
 ------------------
 */
 
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-200px);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateX(50px);
+    opacity: 0.75;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(200px);
+    opacity: 0.5;
+  }
+  75% {
+    transform: translateX(-50px);
+    opacity: 0.75;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes show {
+  0% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.7);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -282,7 +347,7 @@ header {
     url('../images/heroo.jpg') center/cover no-repeat fixed;
   position: relative;
   /* animation */
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 .banner {
@@ -297,6 +362,7 @@ header {
   font-family: var(--ff-secondary);
   color: var(--clr-primary);
   /* animation */
+  animation: slideFromRight 3s ease-in-out 1;
 }
 
 .banner h1 {
@@ -305,6 +371,7 @@ header {
   margin-top: 1.25rem;
   margin-bottom: 2rem;
   /* animation */
+  animation: slideFromLeft 3s ease-in-out 1;
 }
 
 .banner-btn {
@@ -312,6 +379,8 @@ header {
   outline-offset: 0.25rem;
   font-size: 1.25rem;
   padding: 1rem 1.75rem;
+  /* animation */
+  animation: show 3s linear 1;
 }
 
 .banner-btn:hover {
