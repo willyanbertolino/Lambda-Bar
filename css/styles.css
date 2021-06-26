@@ -204,7 +204,6 @@ Navbar
 Header
 ------------------
 */
-
 header {
   min-height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
@@ -227,6 +226,7 @@ header {
   color: var(--clr-primary);
   /* animation */
 }
+
 .banner h1 {
   text-transform: uppercase;
   color: var(--clr-satin-linen);
@@ -262,7 +262,6 @@ header {
 Skills
 ------------------
 */
-
 .skills {
   background: var(--clr-iron);
 }
@@ -291,6 +290,7 @@ Skills
   background: var(--clr-satin-linen);
   box-shadow: 0 2px var(--clr-primary-dark);
 }
+
 .skill:hover .skill-icon {
   transform: translateY(-5px) rotate(-15deg);
 }
@@ -374,6 +374,7 @@ Products
   padding: 2rem;
   margin-bottom: 3rem;
 }
+
 .product-text {
   color: var(--clr-secondary-martini);
   max-width: 26rem;
@@ -382,6 +383,7 @@ Products
 .product {
   padding: 0 4rem;
 }
+
 .product-img {
   margin-bottom: 1rem;
   width: 16rem;
@@ -389,6 +391,7 @@ Products
   object-fit: cover;
   border-radius: var(--radius);
 }
+
 .product h4 {
   width: 16rem;
   text-align: center;
@@ -424,6 +427,7 @@ Products
   top: 0;
   transform: rotateZ(180deg);
 }
+
 .slider::before {
   left: 0;
   top: 0;
@@ -484,7 +488,6 @@ Services
   border-top-right-radius: var(--radius);
   object-fit: cover;
   object-position: 50% 20%;
-
   border-radius: var(--radius);
 }
 
@@ -507,6 +510,7 @@ Services
   font-weight: 400;
   margin-top: 1.25rem;
 }
+
 .service-img-container {
   position: relative;
 }
@@ -541,4 +545,88 @@ Services
   }
 }
 
-/* ------------------ Contact ------------------ */ /* ------------------ Footer ------------------ */ ;
+/* ------------------ 
+Contact 
+------------------ */
+.contact {
+  background: var(--clr-iron);
+}
+.contact-info,
+.contact-form {
+  margin: 1rem 0;
+}
+
+.contact-item {
+  margin-bottom: 1.75rem;
+}
+
+.contact-title {
+  color: var(--clr-primary-dark);
+  font-weight: 400;
+}
+
+.contact-text {
+  text-transform: uppercase;
+  max-width: 30rem;
+}
+
+.contact-form {
+  background: var(--clr-satin-linen);
+  border-radius: var(--radius);
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: var(--transition);
+  max-width: 35rem;
+}
+
+.contact-form:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.contact-form h3 {
+  padding-top: 1.75rem;
+  color: var(--clr-secondary-martini);
+}
+
+.form-group {
+  padding: 1rem 1.5rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: none;
+  margin-bottom: 1.25rem;
+  background: var(--clr-iron);
+  border-radius: var(--radius);
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+}
+
+.form-control::placeholder {
+  font-family: var(--ff-primary);
+  color: var(--clr-main-text);
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+}
+
+@media screen and (min-width: 992px) {
+  .contact-form,
+  .contact-info {
+    float: left;
+    width: 50%;
+  }
+}
+
+/* ------------------ 
+Footer
+------------------ */
