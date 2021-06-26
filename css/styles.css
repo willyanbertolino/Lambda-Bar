@@ -198,7 +198,79 @@ Animation
 Navbar
 ------------------
 */
+.nav-btn {
+  position: fixed;
+  top: 3%;
+  left: 3%;
+  font-size: 2.5rem;
+  color: var(--clr-primary-dark);
+  z-index: 2;
+  cursor: pointer;
+  /* animation */
+  animation: bounce 2s ease infinite;
+}
 
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--clr-satin-linen);
+  z-index: 3;
+  box-shadow: 2px 0 2px rgba(0, 0, 0, 0.3);
+  /* hide navbar */
+  transition: var(--transition);
+  transform: translateX(-100%);
+}
+
+.show-nav {
+  transform: translate(0);
+}
+
+.navbar-header {
+  text-align: right;
+  padding-right: 1rem;
+}
+
+.nav-close {
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: lightcoral;
+  transition: var(--transition);
+}
+
+.nav-close:hover {
+  color: firebrick;
+}
+
+.nav-items {
+  list-style-type: none;
+}
+
+.nav-link {
+  display: block;
+  font-size: 1.5rem;
+  padding: 0.25rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+  color: var(--clr-secondary-spicy-pink);
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  background: var(--clr-primary-dark);
+  color: var(--clr-primary);
+  padding-left: 1.5rem;
+  border-left: 0.25rem solid var(--clr-primary-dark);
+}
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    width: 30%;
+    max-width: 20rem;
+  }
+}
 /* 
 ------------------
 Header
@@ -557,7 +629,7 @@ Contact
 }
 .contact-info,
 .contact-form {
-  margin: 1rem 0;
+  margin: 1rem 2rem;
 }
 
 .contact-item {
