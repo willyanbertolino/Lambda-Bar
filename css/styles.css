@@ -99,10 +99,10 @@ p {
 }
 
 .btn-section {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 1rem;
+  display: block;
+  width: 60%;
+  margin: 2rem auto 0 auto;
+  text-align: center;
 }
 
 .clearfix::after,
@@ -159,7 +159,7 @@ Navbar
   position: fixed;
   top: 3%;
   left: 3%;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   color: var(--clr-primary-dark);
   z-index: 2;
   cursor: pointer;
@@ -187,7 +187,7 @@ Navbar
 
 .navbar-header {
   text-align: right;
-  padding-right: 1rem;
+  padding-right: 2rem;
 }
 
 .nav-close {
@@ -331,13 +331,11 @@ About
 .about-info {
   margin: 0 auto;
   max-width: 28rem;
-  padding: 2rem 0;
-  height: 55vh;
+  /* padding: 2rem 0; */
 }
 
-.about-info {
-  position: relative;
-  display: block;
+.about-img {
+  margin-bottom: 3rem;
 }
 
 .about-picture-container {
@@ -356,7 +354,9 @@ About
 
 .text-container {
   height: 8rem;
+  padding-right: 1rem;
   overflow: auto;
+  text-align: justify;
 }
 
 /* 
@@ -369,11 +369,9 @@ Products
 }
 
 .products-info {
-  position: relative;
   max-width: 28rem;
-  margin: 0 auto;
+  margin: 1rem auto;
   padding: 2rem 0;
-  height: 45vh;
 }
 
 .product {
@@ -393,15 +391,19 @@ Products
   text-align: center;
 }
 
+.products p {
+  text-align: justify;
+}
+
 /* carousel */
 .slider {
   background: var(--clr-iron);
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
   height: 26rem;
-  margin: 2rem auto;
+  margin: 0 auto;
   overflow: hidden;
   position: relative;
-  width: 20rem;
+  width: 15rem;
 }
 
 .slider::after,
@@ -469,7 +471,7 @@ Services
 
 .service-card {
   margin: 2rem auto;
-  width: 18rem;
+  width: 15rem;
   background: var(--clr-satin-linen);
   border-radius: var(--radius);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
@@ -484,7 +486,7 @@ Services
 }
 
 .service-img {
-  width: 18rem;
+  width: 15rem;
   height: 17rem;
   border-top-left-radius: var(--radius);
   border-top-right-radius: var(--radius);
@@ -556,6 +558,11 @@ Contact
   text-transform: uppercase;
 }
 
+.contact-text-email {
+  text-transform: lowercase;
+  letter-spacing: 0.1rem;
+}
+
 .contact-form {
   background: var(--clr-satin-linen);
   border-radius: var(--radius);
@@ -564,6 +571,7 @@ Contact
   transition: var(--transition);
   max-width: 28rem;
   margin: 0 auto;
+  width: 15rem;
 }
 
 .contact-form:hover {
@@ -617,8 +625,10 @@ footer {
 .social-icon {
   color: var(--clr-satin-linen);
   font-size: 1.5rem;
-  margin-right: 1rem;
   transition: var(--transition);
+  margin: 0 auto;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .social-icon:hover {
@@ -721,9 +731,17 @@ Animation
 Responsiveness
 ------------------ */
 @media screen and (min-width: 576px) {
+  .btn-section {
+    width: 50%;
+  }
+
   .skill {
     float: left;
     width: 50%;
+  }
+
+  .contact-form {
+    width: 26rem;
   }
 }
 
@@ -752,6 +770,10 @@ Responsiveness
     font-size: 1rem;
   }
 
+  .nav-btn {
+    font-size: 2.5rem;
+  }
+
   .navbar {
     width: 30%;
     max-width: 20rem;
@@ -760,6 +782,11 @@ Responsiveness
   .section-center {
     width: 90vw;
     position: relative;
+  }
+
+  .products-info,
+  .slider {
+    width: 25rem;
   }
 
   .service-img {
@@ -810,17 +837,16 @@ Responsiveness
   }
 
   .about-info {
-    margin-left: 5%;
     width: 45%;
+    margin-left: 5%;
   }
 
   .products-info,
   .carousel-container {
     float: left;
-    width: 50%;
   }
   .carousel-container {
-    padding-left: 10%;
+    margin-left: 10%;
   }
 
   .contact-form,
@@ -835,16 +861,14 @@ Responsiveness
 }
 
 @media screen and (min-width: 1150px) {
-  .about-img,
   .about-info {
-    left: 10%;
+    margin-left: 8%;
   }
-
   .products-info {
     padding-left: 5%;
   }
   .carousel-container {
-    padding-left: 20%;
+    margin-left: 15%;
   }
 
   .contact-info {
